@@ -1,0 +1,336 @@
+#github-logo {
+    width: 30px; /* Adjust the size as needed */
+    margin-right: 5px;
+}
+
+body {
+    font-family: "Arial", sans-serif;
+    background-color: #162534;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1; /* Grow to fill available space */
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+header img {
+    margin-right: 10px; /* Adjust spacing between logo and title */
+}
+
+header h1 {
+    color: #fff; /* Adjust text color */
+}
+
+form {
+    margin-top: 20px;
+    text-align: center;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+    color: aliceblue;
+}
+
+form input[type="text"],
+form input[type="number"] {
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    display: block; /* Make the button a block element */
+    margin-top: 10px; /* Add some spacing between input and button */
+    padding: 8px 16px;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.card-container {
+    width: 80%;
+    max-width: 600px;
+    margin-top: 20px;
+}
+
+.card {
+    display: flex;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+    flex-wrap: wrap;
+}
+
+.card div {
+    padding: 20px;
+    flex: 1;
+}
+
+.card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.user-info h2 {
+    margin-top: 0;
+}
+
+.info {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.info li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.repo {
+    display: block;
+    padding: 10px;
+    margin: 10px 0;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 1.5);
+    text-decoration: none;
+    color: #16122b;
+    transition: background-color 0.3s ease;
+}
+
+.repo:hover {
+    background-color: #f0f8ff;
+}
+
+#pagination {
+    margin-top: auto; /* Push the pagination to the bottom */
+    margin-bottom: 80px; /* Add some space between content and pagination */
+}
+
+
+#pagination a {
+    display: inline-block;
+    padding: 5px 10px;
+    margin: 0 5px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #162534;
+}
+
+#pagination a.active {
+    background-color: #28a745;
+    color: #fff;
+}
+
+
+footer {
+    background: linear-gradient(to right, #162534, #18171f); /* Linear gradient background */
+    color: #fff; /* Text color */
+    padding-top: 20px; /* Adjust padding */
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 3rem;
+    transition: background 0.3s ease; /* Smooth transition effect */
+    cursor: pointer;
+}
+
+footer:hover {
+    background: linear-gradient(to right, #18171f, #162534); /* Adjust gradient colors for hover */
+}
+
+
+
+
+
+@media only screen and (max-width: 600px) {
+    .card-container {
+        width: 100%; /* Full width for small screens */
+    }
+
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    .user-info {
+        text-align: center;
+    }
+
+    .user-info div {
+        order: -1; /* Move the image to the top on smaller screens */
+    }
+
+    .user-info h2 {
+        margin-bottom: 10px; /* Add some spacing between name and other details */
+    }
+
+    .card {
+        flex-direction: column;
+        align-items: center; /* Center items horizontally */
+        text-align: center; /* Center text content */
+    }
+
+    .card div{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        padding: 50px;
+        align-items: center;
+    }
+
+    .card-container {
+        width: 80%;
+    }
+
+    .card img {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-top: 0;
+        position: absolute;
+    }
+
+    .info li {
+        display: block; /* Display list items as block elements */
+        margin-bottom: 10px; /* Add bottom margin to separate items */
+    }
+
+    footer {
+        font-size: 0.8rem; /* Adjust font size for smaller screens */
+    }
+
+    #pagination {
+        margin-bottom: 80px; /* Adjust as needed for mobile devices */
+    }
+}
+
+
+@media only screen and (min-width: 601px) and (max-width: 768px) {
+
+    .card-container {
+        width: 80%;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    .card img{
+        width: 150px;
+        height: auto;
+    }
+
+}
+
+
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+    /* Styles for laptops */
+
+    body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #162534;
+    }
+
+    header {
+        background-color: #242434;
+        border-radius: 2rem;
+        width: 702px;
+    }
+
+    svg{
+        height: 50px;
+        width: 50px;
+    }
+    
+    header h1 {
+        color: #fff;
+        font-size: 2.5rem;
+    }
+
+    form {
+        margin-top: 30px;
+    }
+
+    form input[type="text"],
+    form input[type="number"],
+    form button {
+        padding: 10px;
+        font-size: 1rem;
+    }
+
+    .card-container {
+        width: 70%;
+        max-width: 800px;
+        margin-top: 30px;
+    }
+
+    .card {
+        background-color: #fff;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .card div {
+        padding: 30px;
+    }
+
+    .card img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .info li {
+        margin-right: 30px;
+    }
+
+    .repo {
+        padding: 15px;
+        margin: 15px 0;
+    }
+
+    #pagination {
+        margin-top: 30px;
+    }
+
+    footer {
+        background-color: #333;
+        color: #fff;
+        padding: 10px 0;
+        font-size: 0.9rem;
+    }
+}
+
+
+@media only screen and (min-width: 1025px) {
+   .card img{
+    width: 200px;
+    height: 170px;
+   }
+
+   .user-info h2{
+    margin-top: 30px;
+   }
+}
